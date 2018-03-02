@@ -2,6 +2,9 @@
  * @param {number[]} nums
  * @return {number}
  */
+
+// 最长连续数
+
 var findMaxConsecutiveOnes = function (nums) {
     let res = 0;
 
