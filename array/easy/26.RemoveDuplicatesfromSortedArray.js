@@ -6,12 +6,14 @@ var removeDuplicates = function (nums) {
     let res = 0;
 
     // 将重复的元素置为null
-    for (let i = 0, j = 1; i < nums.length; j++) {
+    for (let i = 0, j = 1; i < nums.length; ) {
         if (nums[i] === nums[j]) {
             nums[j] = null;
+            j++;
         } else {
             res += 1;
             i = j;
+            j++;
         }
     }
     //console.log("nums1:", nums);
@@ -25,6 +27,7 @@ var removeDuplicates = function (nums) {
             nums[i] = nums[j];
             nums[j] = null;
             i++;
+            j++;
         } else if (nums[i] === null && nums[j] === null) {
             j++;
         }
@@ -47,8 +50,7 @@ var removeDuplicates = function (nums) {
 
     return i + 1;
 };*/
-
-//console.log(removeDuplicates([1, 1, 2]));
+console.log(removeDuplicates([1, 1, 2]));
 console.log(removeDuplicates([1, 1, 1, 2, 2, 4, 6]));
-//console.log(removeDuplicates([1, 1, 2, 2, 4, 6]));
-//console.log(removeDuplicates([1, 1, 2, 2, 4, 4, 6]));
+console.log(removeDuplicates([1, 1, 2, 2, 4, 6]));
+console.log(removeDuplicates([1, 1, 2, 2, 4, 4, 6]));
