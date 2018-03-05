@@ -9,7 +9,7 @@ var isOneBitCharacter = function (bits) {
             i += 1;
         }
     }
-    console.log("length:", bits.length, "i:", i);
+    //console.log("length:", bits.length, "i:", i);
     if( i === bits.length - 1 && bits[i]  === 0) {
         return true;
     }
