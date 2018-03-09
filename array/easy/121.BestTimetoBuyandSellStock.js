@@ -28,15 +28,12 @@ var maxProfit = function (prices) {
     let max_profit = 0, min = Number.POSITIVE_INFINITY;
 
     for (let i = 0; i < prices.length; i++) {
-        /*max_profit = Math.max(max_profit, prices[i] - min);
-        min = Math.min(min, prices[i]);*/
-
-        if (prices[i] < min) min = prices[i];
-        if (prices[i] - min > max_profit) max_profit = prices[i] - min;
+        max_profit = Math.max(max_profit, prices[i] - min);
+        min = Math.min(min, prices[i]);
     }
     //console.log("points:", points);
     return max_profit;
 };
 
 console.log(maxProfit([7, 1, 5, 3, 6, 4])); //5
-console.log(maxProfit([4, 4])); //5
+console.log(maxProfit([4, 4])); //0
