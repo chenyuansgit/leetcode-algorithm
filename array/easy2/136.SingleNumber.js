@@ -1,0 +1,14 @@
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var singleNumber = function (nums) {
+  let result = 0;
+  for (let i = 0; i < nums.length; i++) {
+    result = result ^ nums[i];
+  }
+  return result;
+};
+
+console.log(singleNumber([2, 2, 1])); // 1
+console.log(singleNumber([5, 3, 2, 2, 3]));  // 5
