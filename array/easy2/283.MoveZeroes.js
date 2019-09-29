@@ -14,7 +14,7 @@ var moveZeroes = function (nums) {
   for (let i = point; i < nums.length; i++) {
     nums[i] = 0;
   }
-  return nums;
+  //return nums;
 };
 
 console.log(moveZeroes([0, 1, 0, 3, 12])); // [1,3,12,0,0]
