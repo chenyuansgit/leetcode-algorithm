@@ -27,7 +27,7 @@ function quickSort(nums) {
 
 //console.log(quickSort([9,4,1,5,8,5]));
 
-// error ...
+// error ...123
 function swap(nums, left, right) {
   console.log('nums1:', nums, left, right);
   if(nums && nums.length > 0){
